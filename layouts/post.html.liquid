@@ -1,0 +1,20 @@
+<div class="drink">
+  <h1>
+    {% if single_post %}
+    {{ title }} 
+    {% else %}
+    <a href="{{ url }}">{{ title }}</a>
+    {% endif %}
+    <span class="glass">{{ glass_type }} glass</span>
+  </h1>
+  <div class="content">
+    {{ content }}
+  </div>
+</div>
+{% if single_post %}
+  {% if color %}
+  <style type="text/css" media="screen">
+    body { background: {{ color }}; }
+  </style>
+  {% endif %}
+{% endif %}
