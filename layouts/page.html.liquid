@@ -77,11 +77,11 @@
         margin-top: 10px;
       }
       
-      .paging {
+      .paging, .no-results {
         width: 540px;
         margin: 0 auto;
       }
-     
+      
       .paging a {
         color: #555;
         text-decoration: none;
@@ -105,6 +105,9 @@
     </div>
     <div id="main">
       {{ content }}
+      {% if no_results %}
+        <div class="no-results">No results for <strong>{{ query }}</strong>.</div>
+      {% endif %}
       {% unless single_post %}
         <div class="paging">
           {% if previous_page %}
