@@ -41,7 +41,7 @@
         border-radius: 4px;
         margin-bottom: 20px;
       }
-      
+            
       .drink h1 a {
         color: #333;
         text-decoration: none;
@@ -76,6 +76,26 @@
       .drink .footer {
         margin-top: 10px;
       }
+      
+      .paging {
+        width: 540px;
+        margin: 0 auto;
+      }
+     
+      .paging a {
+        color: #555;
+        text-decoration: none;
+        font-size: 0.8em;
+        text-transform: lowercase;
+      }
+
+      .paging a:hover {
+        text-decoration: underline;
+      }
+
+      .paging .next {
+        float: right;
+      }
     </style>
   </head>
   <body>
@@ -85,6 +105,16 @@
     </div>
     <div id="main">
       {{ content }}
+      {% unless single_post %}
+        <div class="paging">
+          {% if previous_page %}
+            <a class="previous" href="{{ previous_page }}">Previous</a>
+          {% endif %}
+          {% if next_page %}
+            <a class="next" href="{{ next_page }}">Next</a>
+          {% endif %}
+        </div>
+      {% endunless %}
     </div>
   </body>
 </html>
