@@ -12,7 +12,7 @@
   </div>
   <div class="footer">
     {% if author %}
-    <img class="author" alt="{{ author.name }}"/ src="{{ gravatar }}?s=30">
+    <img class="author" alt="{{ author.name }}"/ src="{{ gravatar }}?s=30&d=mm">
     <span class="date">{{ created_at | date: '%b %d %Y' }}</span>
     {% endif %}
   </div>
