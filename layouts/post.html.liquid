@@ -6,6 +6,9 @@
     <a href="{{ url }}">{{ title }}</a>
     {% endif %}
     <span class="glass">{{ glass_type }} glass</span>
+    {% if tag | split:" " | contains 'fave' %}
+    <div class="star">&#9733;</div>
+    {% endif %}
   </h1>
   <div class="content">
     {{ content }}
