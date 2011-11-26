@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>The Liquor Cabinet</title>
+    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
     <style type="text/css" media="screen">
       * {
         margin: 0; padding: 0;
@@ -13,6 +14,22 @@
         color: #333;
       }
       
+      .title, .drink {
+        font-family: 'Special Elite', monospace, Georgia;
+      }
+      
+      .drink h1 {
+        font-family: Helvetica, Arial;
+      }
+      
+      a {
+        color: #3254c2;
+      }
+
+      a:visited {
+        color: #777eb3;
+      }
+
       #main {
         margin: 30px;
       }
@@ -33,13 +50,29 @@
         width: 500px;
         margin: 0 auto;
         font-size: 0.9em;
-        background: rgba(255,255,255, 0.9);
+        background: #fffaf4;
         padding: 20px;
         -moz-border-radius: 4px;
         -webkit-border-radius: 4px;
         -o-border-radius: 4px;
         border-radius: 4px;
         margin-bottom: 20px;
+        box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+        -moz-box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+        -webkit-box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+        -o-box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+      }
+      
+      .drink h1 {
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        margin-bottom: 0;
+      }
+
+      .drink .content {
+        border-top: 1px dotted #ddd;
+        border-bottom: 1px dotted #ddd;
+        padding: 10px 0px;
       }
             
       .drink h1 a {
@@ -54,13 +87,29 @@
       #header {
         background: rgba(255,255,255, 0.2);
         padding:8px;
-        color: #fff;
         height: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 0.7em;
+        color: #666;
       }
 
-      #header .homelink {
-        color: rgba(255, 255, 255, 0.7);
+      #header form {
+        display: inline-block;
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 30px !important;
+        font-size: 2.3em;
+      }
+
+      .title a {
         text-decoration: none;
+        font-weight: bold;
+        color: #333;
       }
       
       #search {
@@ -75,9 +124,11 @@
       
       .drink .footer {
         margin-top: 10px;
+        font-size: 0.8em;
+        color: #999;
       }
       
-      .paging, .no-results {
+      .paging, .no-results, .title {
         width: 540px;
         margin: 0 auto;
       }
@@ -97,28 +148,27 @@
         float: right;
       }
       
-      p {
+      .drink p {
         margin-bottom: 1em;
       }
-
-      a {
-        color: #3254c2;
+      
+      .drink p:first-child {
+        margin-top: 1em;
       }
 
-      a:visited {
-        color: #777eb3;
-      }
     </style>
   </head>
   <body>
     <div id="header">
-      <a class="homelink" href="{{ root_path }}">The Liquor Cabinet</a>
-      <div id="search">{{ search_form }}</div>
+      <div id="search">search {{ search_form }}</div>
     </div>
     <div id="main">
+      <div class="title">
+        <a class="homelink" href="{{ root_path }}">The Liquor Cabinet</a>
+      </div>
       {{ content }}
       {% if no_results %}
-        <div class="no-results">No results for <strong>{{ query }}</strong>.</div>
+        <div class="drink no-results">No results for <strong>{{ query }}</strong>.</div>
       {% endif %}
       {% unless single_post %}
         <div class="paging">
