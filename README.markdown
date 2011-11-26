@@ -1,4 +1,4 @@
-This is the inaugural [Gitstuff](http://gitstuff.com) site. 
+This is the inaugural [Gitstuff](http://gitstuff.com) site. You can see it at [http://gitstuff.com/jkriss/drinks](http://gitstuff.com/jkriss/drinks).
 
 Gitstuff is kind of like Tumblr, but with everything stored in Github, and you can have whatever metadata you want.
 
