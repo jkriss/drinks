@@ -2,8 +2,20 @@
 <html>
   <head>
     <title>The Liquor Cabinet</title>
-    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
-    <style type="text/css" media="screen">
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Special Elite::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); </script>
+      <style type="text/css" media="screen">
       * {
         margin: 0; padding: 0;
       }
@@ -15,7 +27,8 @@
       }
       
       .title, .drink {
-        font-family: 'Special Elite', monospace, Georgia;
+        font-family: 'Special Elite', monospace;
+        font-weight: normal;
       }
       
       .drink h1 {
