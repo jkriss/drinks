@@ -26,12 +26,12 @@
         color: #333;
       }
       
-      .title, .drink {
+      .title, .drink, .paging {
         font-family: 'Special Elite', monospace;
         font-weight: normal;
       }
       
-      .drink h1 {
+      .drink h1, .arrow {
         font-family: Helvetica, Arial;
       }
       
@@ -74,6 +74,7 @@
         -moz-box-shadow: 0 0 8px rgba(0,0,0, 0.3);
         -webkit-box-shadow: 0 0 8px rgba(0,0,0, 0.3);
         -o-box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+        border-left: 10px solid #aaa;
       }
       
       .drink h1 {
@@ -195,10 +196,10 @@
       {% unless single_post %}
         <div class="paging">
           {% if previous_page %}
-            <a class="previous" href="{{ previous_page }}">Previous</a>
+            <a class="previous" href="{{ previous_page }}"><span class="arrow">&larr;</span> Previous</a>
           {% endif %}
           {% if next_page %}
-            <a class="next" href="{{ next_page }}">Next</a>
+            <a class="next" href="{{ next_page }}">Next <span class="arrow">&rarr;</span></a>
           {% endif %}
         </div>
       {% endunless %}

@@ -1,4 +1,4 @@
-<div class="drink">
+<div class="drink" style="border-color: {{ color }}">
   <h1>
     {% if single_post %}
     {{ title }} 
@@ -7,7 +7,7 @@
     {% endif %}
     <span class="glass">{{ glass_type }} glass</span>
     {% if tag | split:" " | contains 'fave' %}
-    <div class="star">&#9733;</div>
+    <div class="star" style="color: {{ color }}">&#9733;</div>
     {% endif %}
   </h1>
   <div class="content">
