@@ -207,7 +207,7 @@
       </div>
       {% if no_results %}
         <div class="drink no-results">No results for <strong>{{ query }}</strong>.</div>
-      {% else %}
+      {% elsif query %}
         <div id="query">Drinks matching <strong>{{ query }}</strong></div>
       {% endif %}
 
