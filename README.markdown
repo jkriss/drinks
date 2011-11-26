@@ -31,3 +31,11 @@ The post template is passed all of the metadata for your post, plus the content 
 - asset_path (the base path for assets)
 - previous_page (the link to the previous page of results, if applicable)
 - next_page (the link to the next page of results, if applicable)
+
+#### Local testing
+
+[gitstuff-preview](http://github.com/jkriss/gitstuff-preview) is your friend.
+
+#### Deploying
+
+Just set up a post-receive url on your Github repo. Ask [@jkriss](http://twitter.com/jkriss) nicely if you want the secret info.
