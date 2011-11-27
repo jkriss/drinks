@@ -4,8 +4,9 @@
  <title>The Liquor Cabinet</title>
  <link href="{{ root_path }}/atom.xml" rel="self"/>
  <link href="http://{{ root_path }}"/>
- {% assign most_recent_post = posts | first %}
- <updated>{{ most_recent_post.modified_at | date_to_xmlschema }}</updated>
+ {% for post in posts limit:1 %}
+ <updated>{{ post.modified_at | date_to_xmlschema }}</updated>
+ {% endfor %}
  <id>{{ root_path }}</id>
  <author>
    <name>Jesse Kriss</name>
