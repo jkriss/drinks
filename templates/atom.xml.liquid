@@ -3,7 +3,7 @@
  
  <title>The Liquor Cabinet</title>
  <link href="{{ root_path }}/atom.xml" rel="self"/>
- <link href="http://{{ root_path }}"/>
+ <link href="{{ root_path }}"/>
  {% for post in posts limit:1 %}
  <updated>{{ post.modified_at | date_to_xmlschema }}</updated>
  {% endfor %}
